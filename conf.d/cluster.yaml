@@ -1,0 +1,18 @@
+frontend:
+  www:
+    binding: "*:80"
+    options:
+      maxconn: 4000
+      default_backend: app
+    
+backend:
+  app:
+    tags: # Can use wildcards * and ? in value
+      - key: haproxy
+        value: enabled
+      - key: "aws:autoscaling:groupName"
+        value: group-name
+    options:
+      mode: http
+      balance: roundrobin
+      option httpchk: HEAD /index.html
