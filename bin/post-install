@@ -1,2 +1,7 @@
 # Create the cron job for haproxy
 crontab -l > file; echo '*/1 * * * * /usr/bin/update-haproxy-config >/dev/null 2>&1' >> file; crontab file
+
+easy_install -q boto
+easy_install -q pyyaml
+easy_install -q mako
+easy_install -q argparse
