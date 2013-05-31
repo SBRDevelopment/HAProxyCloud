@@ -14,7 +14,9 @@ HAProxy Python Management Tools
 Description
 ===========
 
-Script for HAProxy that updates the servers when new servers are added to auto scaling groups.
+Script for HAProxy that updates the servers when new servers are added to an autoscaling group.
+
+Based on the github project https://github.com/markcaudill/haproxy-autoscale
 
 Dependencies
 ============
@@ -22,6 +24,9 @@ Dependencies
 The following PyPi extensions are required.
 
 * boto
+* pyyaml
+* argparse
+* mako
 
 Building
 ========

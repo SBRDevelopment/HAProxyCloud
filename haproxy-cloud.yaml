@@ -1,0 +1,4 @@
+output: /etc/haproxy/haproxy.cfg
+template: /etc/haproxy-cloud/templates/haproxy.tpl
+include: 
+  - /etc/haproxy-cloud/conf.d/*.yaml

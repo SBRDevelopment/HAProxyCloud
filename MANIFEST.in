@@ -1,1 +1,4 @@
 include README.rst
+include haproxy-cloud.yaml
+recursive-include conf.d *.yaml
+recursive-include templates *.tpl

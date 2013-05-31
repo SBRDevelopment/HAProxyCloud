@@ -1,0 +1,16 @@
+#!/usr/bin/python
+
+import time
+import commands
+from datetime import date
+
+dist = commands.getoutput("rpm --eval '%{?dist}'")
+
+d0 = date.today()
+d1 = date(2011, 12, 1)
+delta = d0 - d1
+months = delta.days / 30
+build = months * 100 + 30 + delta.days % 30
+revision = time.strftime('%H%M',time.gmtime())
+
+print "{0}.{1}{2}".format(build, revision, dist)

@@ -1,0 +1,19 @@
+#!/usr/bin/python
+import argparse
+from haproxycloud import HAProxyCloud
+ 
+def main():
+    
+    parser = argparse.ArgumentParser(description="Updates haproxy with an autoscaling group")
+    parser.add_argument("--config", default="/etc/haproxy-cloud/haproxy-cloud.yaml", type=str, help="Yaml configuration to use for this script.")
+    
+    args = parser.parse_args()
+    
+    haproxy = HAProxyCloud(args)
+    
+    if haproxy.has_changed():
+        haproxy.update_configuration()
+        haproxy.reload()
+    
+if __name__ == '__main__':
+    main()

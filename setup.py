@@ -17,6 +17,9 @@ if sys.version_info <= (2,6) or sys.version_info >= (2,8):
 src_path = os.path.dirname(__file__)
 
 data_files = []
+data_files.append(('/etc/haproxy-cloud/', ['haproxy-cloud.yaml']))
+data_files.extend(get_data_files(src_path, '/etc/haproxy-cloud/', 'templates'))
+data_files.extend(get_data_files(src_path, '/etc/haproxy-cloud/', 'conf.d'))
 
 setup(  
         name='haproxy-cloud',
