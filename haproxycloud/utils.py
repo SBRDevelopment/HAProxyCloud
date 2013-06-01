@@ -21,8 +21,8 @@ def merge_array_recursive(a, b):
                 result[k].extend(copy.deepcopy(v))
             if len(v) > 0 and len(result[k]) == 0:
                 result[k] = copy.deepcopy(v)
-        elif k in result and k is not None and k is not '':
-            result[k] = result[k] + copy.deepcopy(v)
+        #elif k in result and k is not None and k is not '':
+        #    result[k] = result[k] + copy.deepcopy(v)
         else:
             result[k] = copy.deepcopy(v)
     return result
