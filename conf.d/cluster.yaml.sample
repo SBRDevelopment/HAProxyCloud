@@ -15,4 +15,3 @@ backend:
     options:
       mode: http
       balance: roundrobin
-      option httpchk: HEAD /index.html
