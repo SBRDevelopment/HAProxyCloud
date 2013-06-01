@@ -39,3 +39,7 @@ Installing
 ==========
 
 * sudo yum install haproxy-cloud
+
+# Must rename the cluster.yaml file if you want to use this config file or just add any .yaml file
+# into the same directory and it will be loaded instead. 
+mv /etc/haproxy-cloud/conf.d/cluster.yaml.sample /etc/haproxy-cloud/conf.d/cluster.yaml
