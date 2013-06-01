@@ -88,6 +88,6 @@ class HAProxyCloud(object):
             sys.exit(1)
             
     def reload(self):
-        command = '''service haproxy reload'''
+        command = '''/etc/init.d/haproxy reload'''
+        subprocess.call(command.split(' '))
         logging.info("HAProxy restarted")
-        return subprocess.call(command.split(' '))
