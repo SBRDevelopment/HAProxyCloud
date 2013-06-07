@@ -8,7 +8,7 @@ import glob
 from mako.template import Template
 
 from haproxycloud.cloud import get_instances
-from haproxycloud.utils import merge_array_recursive
+from haproxycloud.utils import merge_array_recursive, OrderedDictYAMLLoader
 
 __version__ = "0.0.1"
 
@@ -27,7 +27,7 @@ class HAProxyCloud(object):
             
             config = {}
             with open(yaml_file) as config_file:
-                config = yaml.load(config_file)
+                config = yaml.load(config_file, OrderedDictYAMLLoader)
             
             if config is not None:
                 self._config = merge_array_recursive(self._config, config)

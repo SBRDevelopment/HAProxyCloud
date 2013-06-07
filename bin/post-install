@@ -5,3 +5,4 @@ easy_install -q boto
 easy_install -q pyyaml
 easy_install -q mako
 easy_install -q argparse
+easy_install -q ordereddict
