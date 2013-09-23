@@ -3,8 +3,6 @@
 #---------------------------------------------------------------------
 global
     daemon
-    log 127.0.0.1   local0
-    log 127.0.0.1   local1 notice
     maxconn     512
     user        haproxy
     group       haproxy
