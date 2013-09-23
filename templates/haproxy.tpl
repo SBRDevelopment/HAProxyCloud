@@ -19,7 +19,6 @@ global
 #---------------------------------------------------------------------
 defaults
     mode                    http
-    option                  httplog
     option forwardfor       except 127.0.0.0/8
     option                  redispatch
     retries                 3
